@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request
 import os
 from edit_distance import edit_dis
-from flask_script import Manager,Server
+#from flask_script import Manager,Server
 app = Flask(__name__)
 
 # 使用flask-script来运行
-manager = Manager(app)
+#manager = Manager(app)
 # 开启debug
-manager.add_command("runserver", Server(use_debugger=True))
+#manager.add_command("runserver", Server(use_debugger=True))
 
 @app.route('/askme', methods=['GET', 'POST'])
 def validate():
@@ -22,4 +22,5 @@ def validate():
 
 
 if __name__ == '__main__':
-    manager.run()
+    #manager.run()
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
