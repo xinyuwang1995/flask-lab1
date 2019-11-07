@@ -14,9 +14,9 @@ def generate_pairs():
     col_names = ["Topic", "Question", "Answer"]
     df = pd.DataFrame(columns=col_names)
     # create pandas dataframes for files
-    topics = readData(r"D:/flask_ci_cd/lab1_flask/main/dataset/Topics.txt")
-    questions = readData(r"D:/flask_ci_cd/lab1_flask/main/dataset/Questions.txt")
-    answers = readData(r"D:/flask_ci_cd/lab1_flask/main/dataset/Answers.txt")
+    topics = readData(r"main/dataset/Topics.txt")
+    questions = readData(r"main/dataset/Questions.txt")
+    answers = readData(r"main/dataset/Answers.txt")
     # create large data frame
     df["Topic"]=topics.apply(lambda x: str(x).lower())
     df["Question"]=questions.apply(lambda x: str(x).lower())

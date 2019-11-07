@@ -19,6 +19,6 @@ class TestAskMe(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_num_docs(self):
-        self.assertEqual(len(convert_to_list(r"D:/flask_ci_cd/lab1_flask/main/dataset/Answers.txt")), 2609)
+        self.assertEqual(len(convert_to_list(r"main/dataset/Answers.txt")), 2609)
 
 
